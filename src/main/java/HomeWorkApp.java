@@ -1,65 +1,40 @@
-import java.util.Random;
+import java.util.Arrays;
 
 public class HomeWorkApp {
-    private static final Random random = new Random();
-
-    private static void checkSumSign() {
-        int firstNumber = random.nextInt(Constants.RANDOM_NUMBER) - Constants.NUMBER_TO_DISTRIBUTE;
-        int secondNumber = random.nextInt(Constants.RANDOM_NUMBER) - Constants.NUMBER_TO_DISTRIBUTE;
-        int sumOfNumbers = firstNumber + secondNumber;
-        if (sumOfNumbers >= 0) {
-            System.out.println(Constants.POSITIVE_NUMBER);
-        } else {
-            System.out.println(Constants.NEGATIVE_NUMBER);
-        }
-
-        System.out.println();
-    }
-
-    private static void printColor() {
-        int value = random.nextInt(2 * Constants.RANDOM_NUMBER) - Constants.NUMBER_TO_DISTRIBUTE;
-        if (value <= 0) {
-            System.out.println(Constants.RED_COLOR);
-        }
-
-        if (100 >= value && value >= 0) {
-            System.out.println(Constants.YELLOW_COLOR);
-        }
-
-        if (value >= 100) {
-            System.out.println(Constants.GREEN_COLOR);
-        }
-
-        System.out.println();
-    }
-
-    private static void printThreeWords() {
-        System.out.println(Constants.ORANGE);
-        System.out.println(Constants.BANANA);
-        System.out.println(Constants.APPLE);
-
-        System.out.println();
-    }
-
-    private static void compareNumbers() {
-        int a = random.nextInt(Constants.RANDOM_NUMBER) - Constants.NUMBER_TO_DISTRIBUTE;
-        int b = random.nextInt(Constants.RANDOM_NUMBER) - Constants.NUMBER_TO_DISTRIBUTE;
-        if (a >= b)
-            System.out.println(Constants.A_MORE_THAN_B);
-        else
-            System.out.println(Constants.A_LESS_THAN_B);
-
-        System.out.println();
-    }
 
     public static void main(String[] args) {
-        System.out.println(Constants.FIRST + Constants.METHOD);
-        printThreeWords();
-        System.out.println(Constants.SECOND + Constants.METHOD);
-        checkSumSign();
-        System.out.println(Constants.THIRD + Constants.METHOD);
-        printColor();
-        System.out.println(Constants.FOURTH + Constants.METHOD);
-        compareNumbers();
+        PrinterMethods.printNumberOfTask(Constants.FIRST);
+        PrinterMethods.printResultOfTask(LimitSum.checkSum(Constants.SIX, Constants.HUNDRED));
+
+        PrinterMethods.printNumberOfTask(Constants.SECOND);
+        PrinterMethods.printResultOfTask(SignNumber.checkSignOfNumber(Constants.SIX));
+
+        PrinterMethods.printNumberOfTask(Constants.THIRD);
+        PrinterMethods.printResultOfTask(SignNumber.isNegativeNumber(Constants.SIX));
+
+        PrinterMethods.printNumberOfTask(Constants.FOURTH);
+        PrinterMethods.printMultipleString(Constants.STRING_EXAMPLE, Constants.FOUR);
+        PrinterMethods.printSpace();
+
+        PrinterMethods.printNumberOfTask(Constants.FOURTH_WITH_STAR);
+        PrinterMethods.printResultOfTask(LeapYear.isLeapYear(Constants.FOUR_HUNDRED));
+
+        PrinterMethods.printNumberOfTask(Constants.FIFTH);
+        PrinterMethods.printMas(ArrayNumberSwapper.swapNumbers(Constants.ARRAY_EXAMPLE_ONE));
+
+        PrinterMethods.printNumberOfTask(Constants.SIXTH);
+        PrinterMethods.printMas(FillingOfArray.fillFromOneToHundred());
+
+        PrinterMethods.printNumberOfTask(Constants.SEVENTH);
+        PrinterMethods.printMas(ArrayWalker.walkInTheArray());
+
+        PrinterMethods.printNumberOfTask(Constants.EIGHTH);
+        PrinterMethods.matrixPrinter(FillingOfMatrix.fillMatrix(Constants.FOUR));
+
+        PrinterMethods.printNumberOfTask(Constants.NINTH);
+        PrinterMethods.printMas(FillingOfArray.fillWithInitialValue(Constants.TEN, Constants.TWO));
+
+        PrinterMethods.printNumberOfTask(Constants.NINTH_WITH_STAR);
+        PrinterMethods.printMas(FillingOfArray.shiftArray(Constants.ARRAY_EXAMPLE_TWO, Constants.FOUR));
     }
 }
