@@ -1,40 +1,25 @@
-import java.util.Arrays;
-
 public class HomeWorkApp {
 
     public static void main(String[] args) {
-        PrinterMethods.printNumberOfTask(Constants.FIRST);
-        PrinterMethods.printResultOfTask(LimitSum.checkSum(Constants.SIX, Constants.HUNDRED));
+        Employee[] employees = new Employee[Constants.FIVE];
 
-        PrinterMethods.printNumberOfTask(Constants.SECOND);
-        PrinterMethods.printResultOfTask(SignNumber.checkSignOfNumber(Constants.SIX));
+        employees[0] = new Employee("Blair", "Eric", "Arthur", "Writer",
+                "GeorgeOrwell1984@gmail.com", "+25061903", "Infinity", 46);
 
-        PrinterMethods.printNumberOfTask(Constants.THIRD);
-        PrinterMethods.printResultOfTask(SignNumber.isNegativeNumber(Constants.SIX));
+        employees[1] = new Employee("Bulgakov", "Anatoliy", "Anatolievich", "Software Engineer",
+                "blgkv1995@gmail.com", "+77472362954", "250000$", 27);
 
-        PrinterMethods.printNumberOfTask(Constants.FOURTH);
-        PrinterMethods.printMultipleString(Constants.STRING_EXAMPLE, Constants.FOUR);
-        PrinterMethods.printSpace();
+        employees[2] = new Employee("Bulgakov", "Mikhail", "Afanasyevich", "Writer",
+                "masterisalive@gmail.com", "+15051981", "Infinity", 48);
 
-        PrinterMethods.printNumberOfTask(Constants.FOURTH_WITH_STAR);
-        PrinterMethods.printResultOfTask(LeapYear.isLeapYear(Constants.FOUR_HUNDRED));
+        employees[3] = new Employee("Agüero del Castillo", "Sergio", "Leonel", "Footballer",
+                "sergioaguero@gmail.com", "+9320", "4000000$", 33);
 
-        PrinterMethods.printNumberOfTask(Constants.FIFTH);
-        PrinterMethods.printMas(ArrayNumberSwapper.swapNumbers(Constants.ARRAY_EXAMPLE_ONE));
+        employees[4] = new Employee("Nepomniachtchi", "Ian", "Alexandrovich", "chess player",
+                "worldchampion2022@gmail.com", "+14071990", "1000000$", 31);
 
-        PrinterMethods.printNumberOfTask(Constants.SIXTH);
-        PrinterMethods.printMas(FillingOfArray.fillFromOneToHundred());
-
-        PrinterMethods.printNumberOfTask(Constants.SEVENTH);
-        PrinterMethods.printMas(ArrayWalker.walkInTheArray());
-
-        PrinterMethods.printNumberOfTask(Constants.EIGHTH);
-        PrinterMethods.matrixPrinter(FillingOfMatrix.fillMatrix(Constants.FOUR));
-
-        PrinterMethods.printNumberOfTask(Constants.NINTH);
-        PrinterMethods.printMas(FillingOfArray.fillWithInitialValue(Constants.TEN, Constants.TWO));
-
-        PrinterMethods.printNumberOfTask(Constants.NINTH_WITH_STAR);
-        PrinterMethods.printMas(FillingOfArray.shiftArray(Constants.ARRAY_EXAMPLE_TWO, Constants.FOUR));
+        for (Employee employee : employees) {
+            System.out.println(employee);
+        }
     }
 }

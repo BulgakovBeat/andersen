@@ -1,33 +1,3 @@
 public class Constants {
-    public static final String METHOD = "Method";
-    public static final String FIRST = "First";
-    public static final String SECOND = "Second";
-    public static final String THIRD = "Third";
-    public static final String FOURTH = "Fourth";
-    public static final String FOURTH_WITH_STAR = "Fourth_With_Star";
-    public static final String FIFTH = "Fifth";
-    public static final String SIXTH = "Sixth";
-    public static final String SEVENTH = "Seventh";
-    public static final String EIGHTH = "Eighth";
-    public static final String NINTH = "Ninth";
-    public static final String NINTH_WITH_STAR = "Ninth_With_Star";
-    public static final String POSITIVE = "Положительное число";
-    public static final String NEGATIVE = "Негативное число";
-    public static final Integer HUNDRED = 100;
-    public static final Integer SIX = 6;
-    public static final Integer TWO = 2;
-    public static final Integer FOUR_HUNDRED = 400;
-    public static final Integer ZERO = 0;
-    public static final Integer ONE = 1;
-    public static final Integer FOUR = 4;
-    public static final Integer TWENTY = 20;
-    public static final Integer TEN = 10;
-    public static final String STRING_EXAMPLE = "EXAMPLE";
-    public static final int[] ARRAY_EXAMPLE_ONE = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
-    public static final int[] ARRAY_EXAMPLE_TWO = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-    public static final int NEGATIVE_NUMBER = -5;
-    public static final int[] ARRAY_SHIFT_TEST = {4, 8, 9, 1, 1, 5, 3, 2, 11, 4, 5, 2};
-    public static final int[][] MATRIX_FILL_TEST = {{1, 0, 0, 1}, {0, 1, 1, 0}, {0, 1, 1, 0}, {1, 0, 0, 1}};
-    public static final int[] ARRAY_WALK_TEST = {2, 10, 6, 4, 11, 8, 10, 4, 8, 8, 9, 2};
-    public static final int[] ARRAY_SWAP_TEST = {0, 0, 1, 1, 0, 1, 0, 0, 1, 1};
+    public static final Integer FIVE = 5;
 }
