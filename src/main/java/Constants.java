@@ -1,6 +1,6 @@
 public class Constants {
-    public static final int MIN = 50;
-    public static final int MAX = 150;
-    public static final int DIFF = MAX - MIN;
-    public static final int COUNT_OF_CATS = 3;
+    public static final int THREE = 3;
+    public static final int SIX = 6;
+    public static final int ZERO = 0;
+    public static final int FOUR = 4;
 }
