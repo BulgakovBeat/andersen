@@ -1,35 +1,14 @@
-import Exceptions.MyArrayDataException;
-import Exceptions.MyArraySizeException;
-
-import java.util.Random;
-
 public class HomeWorkApp {
 
     public static void main(String[] args) {
+        String[] header = new String[]{"Value1", "Value2", "Value3"};
+        int[][] mas = new int[][]{{100, 101, 102}, {103, 104, 105}, {106, 107, 108}};
+        AppData app = new AppData(header, mas);
+        app.writeToFile();
 
-        try {
-            int n = Constants.FOUR;
-            int m = getRandomNumberForMatrixSize();
-            Matrix mat = new Matrix(n, m);
-
-            if (!mat.checkSize())
-                throw new MyArraySizeException(n, m);
-
-            mat.sumMatrix();
-            mat.printMatrix();
-
-            //Adding this method to destroy the current matrix
-            mat.destroyMatrix();
-            mat.sumMatrix();
-            mat.printMatrix();
-        } catch (MyArraySizeException | MyArrayDataException ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    public static int getRandomNumberForMatrixSize() {
-        Random rand = new Random();
-        return rand.nextInt(Constants.FOUR) + Constants.ONE;
+        AppData app2 = new AppData();
+        app2.readToFile();
+        app2.print();
     }
 }
 
